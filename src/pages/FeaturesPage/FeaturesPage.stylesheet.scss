@@ -1,0 +1,12 @@
+.features{
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    &__listItem {
+        flex-basis: 45%;
+        margin-bottom: 20px !important;
+    }
+}

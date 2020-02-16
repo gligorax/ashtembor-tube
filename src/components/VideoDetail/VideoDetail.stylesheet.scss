@@ -1,0 +1,25 @@
+.videoDetail {
+    &__btns {
+        margin: 0 auto;
+        display: flex;  
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__goToSearchBtn {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    &__video {
+        min-width: 60vw;
+        max-width: 60vw !important;
+        @media (max-width: 960px) {
+            max-width: 100% !important;
+        }
+    }
+
+    &__title {
+        font-size: 24px !important;
+    }
+}

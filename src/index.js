@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+
+import { Provider } from 'react-redux';
+
+import store from './redux/store/store';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { SearchPage, VideoPage, FavouritesPage, FeaturesPage } from './pages/index';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const routing = (
+    <Provider store={store}>
+        <Router>
+            <>
+                <Route path="/" component={App} />
+                <Route exact path="/search" component={SearchPage} />
+                <Route exact path="/my-favourites" component={FavouritesPage} />
+                <Route exact path="/features" component={FeaturesPage} />
+                <Route path="/search/query=:id" component={SearchPage} />
+                <Route path="/details/video:id" component={VideoPage} />
+            </>
+        </Router>
+    </Provider>
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+ReactDOM.render(routing, document.querySelector('#root'));

@@ -1,0 +1,18 @@
+.videoCard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    
+    &__card {
+        max-width: 80%;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    &__header{
+        min-height: 100px;
+    }
+    &__desc {
+        word-break: break-word;
+    }
+}

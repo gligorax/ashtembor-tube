@@ -1,0 +1,15 @@
+.favouritesPage{
+    &__heading {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    &__icon {
+        color: #f50057;
+        & svg {
+            font-size: 80px;
+            display: flex;
+            margin: auto;
+        }
+    }
+}
