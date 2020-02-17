@@ -57,7 +57,7 @@ const DropDownItem = styled.li`
             params: {
             part: 'snippet',
             maxResults: 6,
-            key: 'AIzaSyA8ZWQCV1uYwUJKDvyLdfOOoCcRzWDBm2Y',
+            key: 'YOUR_API_KEY',
             q: query
         }});
         setCurrentQuery(query);
